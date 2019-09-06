@@ -5,30 +5,24 @@ import alpha.orange.asim.loginmvppattern.View.Iloginview;
 public class loginpresenter implements Iloginpresenter {
 
     Iloginview iloginview;
-    String user,pass;
 
-    public loginpresenter(String user, String pass) {
-        this.user = user;
-        this.pass = pass;
+
+    public loginpresenter(Iloginview iloginview) {
+       this.iloginview=iloginview;
     }
 
     @Override
-    public void onlogin(String user, String pass) {
+    public void onlogin(String email, String pass) {
 
-        user users=new user(user,pass);
+        user users=new user(email,pass);
 
-        boolean isval=users.isvalid();
+        boolean isvalidate=users.isvalid();
 
-        if(isval)
-        {
+        if(isvalidate)
             iloginview.loginmessage("login success");
-        }
 
         else
-
-        {
             iloginview.loginmessage("login failed");
-        }
 
     }
 

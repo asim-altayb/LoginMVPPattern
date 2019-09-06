@@ -21,6 +21,7 @@ public class loginActiv extends AppCompatActivity implements Iloginview {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        loginpresenter = new loginpresenter(this);
 
         //init views
         user=(EditText) findViewById(R.id.et_user);
@@ -35,9 +36,7 @@ public class loginActiv extends AppCompatActivity implements Iloginview {
             @Override
             public void onClick(View view) {
 
-                loginpresenter = new loginpresenter(user.getText().toString() , pass.getText().toString());
-                System.out.println("clicked");
-
+                loginpresenter.onlogin(user.getText().toString(),pass.getText().toString());
             }
         });
 
@@ -46,7 +45,7 @@ public class loginActiv extends AppCompatActivity implements Iloginview {
     @Override
     public void loginmessage(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        System.out.println(msg);
+
     }
 
 
