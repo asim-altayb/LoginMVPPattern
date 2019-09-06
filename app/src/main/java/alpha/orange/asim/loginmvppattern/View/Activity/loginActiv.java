@@ -11,7 +11,7 @@ import alpha.orange.asim.loginmvppattern.Presenter.loginpresenter;
 import alpha.orange.asim.loginmvppattern.R;
 import alpha.orange.asim.loginmvppattern.View.Iloginview;
 
-public class loginActiv extends AppCompatActivity implements Iloginview, View.OnClickListener {
+public class loginActiv extends AppCompatActivity implements Iloginview {
     EditText user,pass;
     Button login;
 
@@ -31,18 +31,23 @@ public class loginActiv extends AppCompatActivity implements Iloginview, View.On
 
         //init clicks
 
-        login.setOnClickListener((View.OnClickListener) this);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                loginpresenter = new loginpresenter(user.getText().toString() , pass.getText().toString());
+                System.out.println("clicked");
+
+            }
+        });
 
     }
 
     @Override
     public void loginmessage(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        System.out.println(msg);
     }
 
-    @Override
-    public void onClick(View view) {
 
-        loginpresenter = new loginpresenter(user.getText().toString() , pass.getText().toString()) ;
-    }
 }
