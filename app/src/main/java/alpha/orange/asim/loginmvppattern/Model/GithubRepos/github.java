@@ -8,8 +8,8 @@ import retrofit2.http.Path;
 public interface github {
     String JSONURL = "https://api.github.com/";
 
-    @GET("users/asim-altayb/repos")
-    Call<String> getString();
+    @GET("users/{username}/repos")
+    Call<String> getString(@Path("username") String user);
 
 
 }

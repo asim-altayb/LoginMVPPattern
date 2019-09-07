@@ -9,15 +9,52 @@
 
     <TextView
         android:id="@+id/repos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="353dp"
+        android:layout_height="400dp"
         android:layout_marginBottom="28dp"
         android:layout_marginEnd="27dp"
         android:layout_marginStart="27dp"
+        android:scrollbars="vertical"
+
         android:layout_marginTop="8dp"
         android:text="empty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/et_user_git"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ems="10"
+        android:hint="Github user"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="fetch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_user_git" />
+
+    <TextView
+        android:id="@+id/user_repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/repos"
+        app:layout_constraintStart_toStartOf="@+id/fetch" />
 </android.support.constraint.ConstraintLayout>
