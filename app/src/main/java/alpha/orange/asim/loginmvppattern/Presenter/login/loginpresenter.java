@@ -1,6 +1,7 @@
-package alpha.orange.asim.loginmvppattern.Presenter;
-import alpha.orange.asim.loginmvppattern.Model.user;
-import alpha.orange.asim.loginmvppattern.View.Iloginview;
+package alpha.orange.asim.loginmvppattern.Presenter.login;
+
+import alpha.orange.asim.loginmvppattern.Model.Users.user;
+import alpha.orange.asim.loginmvppattern.View.views.Iloginview;
 
 public class loginpresenter implements Iloginpresenter {
 
@@ -19,10 +20,10 @@ public class loginpresenter implements Iloginpresenter {
         boolean isvalidate=users.isvalid();
 
         if(isvalidate)
-            iloginview.loginmessage("login success");
+            iloginview.loginmessage(true);
 
         else
-            iloginview.loginmessage("login failed");
+            iloginview.loginmessage(false);
 
     }
 

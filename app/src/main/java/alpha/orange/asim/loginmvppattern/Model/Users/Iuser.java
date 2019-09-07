@@ -1,4 +1,4 @@
-package alpha.orange.asim.loginmvppattern.Model;
+package alpha.orange.asim.loginmvppattern.Model.Users;
 
 public interface Iuser {
     String getUser();
