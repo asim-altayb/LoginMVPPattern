@@ -1,6 +1,6 @@
 package alpha.orange.asim.loginmvppattern.Presenter.login;
 
-import alpha.orange.asim.loginmvppattern.Model.Users.user;
+import alpha.orange.asim.loginmvppattern.Model.NewUser.user;
 import alpha.orange.asim.loginmvppattern.View.views.Iloginview;
 
 public class loginpresenter implements Iloginpresenter {
