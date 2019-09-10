@@ -58,12 +58,12 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
     //here to fetch repository of "user"
     public void getResponse(String user){
 
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(github.JSONURL)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
 
+        //github interface created to be retrofit
         github api = retrofit.create(github.class);
 
         Call<String> call = api.getString(user);
