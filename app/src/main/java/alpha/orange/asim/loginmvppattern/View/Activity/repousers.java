@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import alpha.orange.asim.loginmvppattern.Model.GithubRepos.github;
+import alpha.orange.asim.loginmvppattern.Model.GithubService.github;
 import alpha.orange.asim.loginmvppattern.R;
 import retrofit2.Call;
 import retrofit2.Callback;

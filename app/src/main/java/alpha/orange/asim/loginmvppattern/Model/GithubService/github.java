@@ -1,4 +1,4 @@
-package alpha.orange.asim.loginmvppattern.Model.GithubRepos;
+package alpha.orange.asim.loginmvppattern.Model.GithubService;
 
 
 import retrofit2.Call;
