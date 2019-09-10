@@ -40,6 +40,8 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
         fetch.setOnClickListener(this);
 
     }
+
+    //button onclick linstner "fetch"
     public void onClick (View view){
         getResponse(etuser.getText().toString());
     }
