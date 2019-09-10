@@ -20,7 +20,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class repousers extends AppCompatActivity {
+public class repousers extends AppCompatActivity implements View.OnClickListener {
 
     TextView repo,userrepo;
     EditText etuser;
@@ -32,21 +32,23 @@ public class repousers extends AppCompatActivity {
         setContentView(R.layout.activity_repousers);
 
         //init views
+
+
+        initviews();
+
+        //init events
+        fetch.setOnClickListener(this);
+
+    }
+    public void onClick (View view){
+        getResponse(etuser.getText().toString());
+    }
+
+    public void initviews(){
         repo = (TextView) findViewById(R.id.repos);
         etuser=(EditText) findViewById(R.id.et_user_git);
         fetch =(Button) findViewById(R.id.fetch);
         userrepo= (TextView) findViewById(R.id.user_repo);
-
-
-
-        //init events
-        fetch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getResponse(etuser.getText().toString());
-            }
-        });
-
     }
 
 
