@@ -37,7 +37,7 @@ public class loginActiv extends AppCompatActivity implements Iloginview {
             @Override
             public void onClick(View view) {
 
-                loginpresenter.onlogin(user.getText().toString(),pass.getText().toString());
+                loginpresenter.Onlogin(user.getText().toString(),pass.getText().toString());
             }
         });
 
