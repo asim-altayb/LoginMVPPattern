@@ -25,10 +25,10 @@ public class loginActiv extends AppCompatActivity implements Iloginview {
         loginpresenter = new loginpresenter(this);
 
         //init views
-        user=(EditText) findViewById(R.id.et_user_git);
-        pass=(EditText) findViewById(R.id.et_pass);
+        user= findViewById(R.id.et_user_git);
+        pass= findViewById(R.id.et_pass);
 
-        login=(Button) findViewById(R.id.btn_login);
+        login= findViewById(R.id.btn_login);
 
 
         //init clicks
