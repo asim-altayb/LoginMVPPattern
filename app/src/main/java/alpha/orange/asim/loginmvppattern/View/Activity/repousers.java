@@ -2,6 +2,7 @@ package alpha.orange.asim.loginmvppattern.View.Activity;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
@@ -71,7 +72,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
         call.enqueue(new Callback<String>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response)
+            public void onResponse(@NonNull Call<String> call, Response<String> response)
             {
 
                 Log.i("Responsestring", response.toString());
