@@ -71,35 +71,43 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
         call.enqueue(new Callback<String>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<String> call, Response<String> response)
+            {
+
                 Log.i("Responsestring", response.toString());
                 //Toast.makeText()
-                if (response.isSuccessful()) {
+         if (response.isSuccessful()) {
+
                     if (response.body() != null) {
+
                         Log.i("onSuccess", response.body().toString());
 
                         repo.setText(response.body().toString());
                         repo.setMovementMethod(new ScrollingMovementMethod());
 
-
                         userrepo.setText(etuser.getText()+"'s Repos");
 
+                    }
+                    else
+                        {
 
-
-                    } else {
                         Log.i("onEmptyResponse", "Returned empty response");
                         userrepo.setText(etuser.getText()+"'s Repos");
                         repo.setText("empty repo");
                         Toast.makeText(getApplicationContext(),"NoRepo found on "+etuser.getText(),Toast.LENGTH_LONG).show();
-                    }
+                       }
+
                 }
-                else{
+
+        else{
                     userrepo.setText(etuser.getText()+"'s Repos");
                     repo.setText("empty repo");
                     Toast.makeText(getApplicationContext(),"NoRepo found on "+etuser.getText(),Toast.LENGTH_LONG).show();
 
-                }
-            }
+             }
+
+            }//on response
+
 //this if happened something problem
             @Override
             public void onFailure(Call<String> call, Throwable t) {
