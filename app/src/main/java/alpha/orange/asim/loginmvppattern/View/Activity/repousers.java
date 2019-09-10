@@ -104,6 +104,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onFailure(Call<String> call, Throwable t) {
 
+                Toast.makeText(repousers.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
