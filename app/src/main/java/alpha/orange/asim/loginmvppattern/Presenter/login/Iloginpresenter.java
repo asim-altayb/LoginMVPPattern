@@ -1,5 +1,6 @@
 package alpha.orange.asim.loginmvppattern.Presenter.login;
 
 public interface Iloginpresenter {
-    void onlogin(String user,String pass);
+
+    void Onlogin(String user,String pass);
 }
