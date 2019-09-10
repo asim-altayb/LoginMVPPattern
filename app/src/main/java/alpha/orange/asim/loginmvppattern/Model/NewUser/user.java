@@ -3,6 +3,7 @@ package alpha.orange.asim.loginmvppattern.Model.NewUser;
 import android.text.TextUtils;
 
 public class user implements userInterface {
+
     private String email,pass;
 
     public user(String email, String pass) {
