@@ -48,10 +48,10 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
     //initialize variables
     public void initviews(){
-        repo = (TextView) findViewById(R.id.repos);
-        etuser=(EditText) findViewById(R.id.et_user_git);
-        fetch =(Button) findViewById(R.id.fetch);
-        userrepo= (TextView) findViewById(R.id.user_repo);
+        repo = findViewById(R.id.repos);
+        etuser= findViewById(R.id.et_user_git);
+        fetch = findViewById(R.id.fetch);
+        userrepo= findViewById(R.id.user_repo);
     }
 
 
