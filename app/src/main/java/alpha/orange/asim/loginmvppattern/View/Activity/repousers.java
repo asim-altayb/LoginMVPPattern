@@ -64,6 +64,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
                 .build();
 
         //github interface created to be retrofit
+
         github api = retrofit.create(github.class);
 
         Call<String> call = api.getString(user);
@@ -99,7 +100,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
                 }
             }
-
+//this if happened something problem
             @Override
             public void onFailure(Call<String> call, Throwable t) {
 
