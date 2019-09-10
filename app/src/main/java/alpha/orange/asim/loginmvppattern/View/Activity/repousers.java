@@ -46,6 +46,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
         getResponse(etuser.getText().toString());
     }
 
+    //initialize variables
     public void initviews(){
         repo = (TextView) findViewById(R.id.repos);
         etuser=(EditText) findViewById(R.id.et_user_git);
