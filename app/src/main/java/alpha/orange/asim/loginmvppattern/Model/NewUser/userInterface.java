@@ -1,7 +1,9 @@
 package alpha.orange.asim.loginmvppattern.Model.NewUser;
 
-public interface Iuser {
+public interface userInterface {
+
     String getUser();
     String getPass();
     boolean isvalid();
+
 }
