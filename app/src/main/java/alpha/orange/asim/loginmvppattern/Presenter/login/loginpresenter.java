@@ -5,7 +5,7 @@ import alpha.orange.asim.loginmvppattern.View.views.Iloginview;
 
 public class loginpresenter implements Iloginpresenter {
 
-    Iloginview iloginview;
+    private Iloginview iloginview;
 
 
     public loginpresenter(Iloginview iloginview) {
@@ -13,7 +13,7 @@ public class loginpresenter implements Iloginpresenter {
     }
 
     @Override
-    public void onlogin(String email, String pass) {
+    public void Onlogin(String email, String pass) {
 
         user users=new user(email,pass);
 
