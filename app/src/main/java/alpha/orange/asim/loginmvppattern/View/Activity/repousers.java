@@ -1,6 +1,7 @@
 package alpha.orange.asim.loginmvppattern.View.Activity;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -71,8 +72,9 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
         Call<String> call = api.getString(user);
 
         call.enqueue(new Callback<String>() {
+            @SuppressLint("SetTextI18n")
             @Override
-            public void onResponse(@NonNull Call<String> call, Response<String> response)
+            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response)
             {
 
                 Log.i("Responsestring", response.toString());
@@ -81,9 +83,9 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
                     if (response.body() != null) {
 
-                        Log.i("onSuccess", response.body().toString());
+                        Log.i("onSuccess", response.body());
 
-                        repo.setText(response.body().toString());
+                        repo.setText(response.body());
                         repo.setMovementMethod(new ScrollingMovementMethod());
 
                         userrepo.setText(etuser.getText()+"'s Repos");
@@ -111,7 +113,7 @@ public class repousers extends AppCompatActivity implements View.OnClickListener
 
 //this if happened something problem
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(@NonNull Call<String> call, Throwable t) {
 
                 Toast.makeText(repousers.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
